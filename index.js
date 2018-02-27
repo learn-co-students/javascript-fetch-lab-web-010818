@@ -38,10 +38,6 @@ function forkRepo() {
   .then(json => showResults(json));
 }
 
-// function showForkedRepo(repo) {
-//   $('#results').append(repo.template())
-// }
-
 function getToken() {
   return '';
 }
