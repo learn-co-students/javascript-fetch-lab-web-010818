@@ -16,9 +16,8 @@ function showIssues(json) {
 function createIssue() {
   fetch(`https://api.github.com/repos/${fork}/issues`, {
     method: 'post',
-    title: `${document.getElementById('title').value}`,
-    body: `${document.getElementById('body').value}`,
-    headers: { Authorization: `token ${getToken()}` }
+    headers: { Authorization: `token ${getToken()}` },
+    body: JSON.stringify(document.getElementById('body').value)
   });
   getIssues();
 }
