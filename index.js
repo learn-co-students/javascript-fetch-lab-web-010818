@@ -14,7 +14,6 @@ function getIssues() {
 }
 
 function showIssues(data) {
-  console.log(data)
   let issuesHtml = '';
   data.forEach((issue) => {issuesHtml += `
     <strong>${issue.title}</strong>
@@ -38,8 +37,6 @@ function createIssue() {
   })
   .then(console.log('issue successfully submitted.'))
   .then(getIssues())
-  // .then(res => res.json())
-  // .then(json => showIssues(json))
 }
 
 function forkRepo() {
